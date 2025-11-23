@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <windows.h>
+using namespace std;
+int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    double a, b, c, x;
+    cout << "Введіть a: ";
+    cin >> a;
+    cout << "Введіть b: ";
+    cin >> b;
+    cout << "Введіть c: ";
+    cin >> c;
+    cout << "Введіть x: ";
+    cin >> x;
+    if (fabs(c - x) < 1e-12) {
+        cout << "ОДЗ порушено: знаменник (c - x) =0. Введіть інші значення." << endl;
+        return 0;
+    }
+    double F = (a * a + b) / (c - x);
+    cout << fixed << setprecision(4);
+    cout << "Вхідні дані: a = " << a << "b = " << b << "c = " << c << "x = " << x << endl;
+    cout << "Результат: F = " << F << endl;
+    return 0;
+}
+
