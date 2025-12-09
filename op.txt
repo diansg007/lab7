@@ -15,7 +15,7 @@ int main() {
     cin >> c;
     cout << "Введіть x: ";
     cin >> x;
-    if (fabs(c - x) < 1e-13) {
+    if (fabs(c - x) < 1e-16) {
         cout << "ОДЗ порушено: знаменник (c - x) =0. Введіть інші значення." << endl;
         return 0;
     }
